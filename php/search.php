@@ -1,13 +1,15 @@
 <?php
 session_start();
 ini_set("display_errors", 1);
-
+$sname = $_SESSION["name"];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = $_POST["name"];
     $category = $_POST["category"];
 
     include("../functions/funcs.php");
     $pdo = db_conn();
+
+    
 
 
     //３．SQL作成
@@ -35,25 +37,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pdo = db_conn();
 
     $category = $_GET["category"] ?? "";
-    $review =$_GET["review"] ?? "";
-    $value =$_GET["value"] ?? "";
+    $review = $_GET["review"] ?? "";
+    $value = $_GET["value"] ?? "";
 
-    if(!empty($category)){
+    if (!empty($category)) {
         $sql = "SELECT * FROM products WHERE category =:category ORDER BY created_at DESC";
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(":category", $category);
         $status = $stmt->execute();
-    }    
+    }
 
-    if(!empty($review)){
+    if (!empty($review)) {
         $sql = "SELECT * FROM products WHERE review =:review ORDER BY created_at DESC";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(":review", $review); 
+        $stmt->bindValue(":review", $review);
         $status = $stmt->execute();
     }
 
 
-    if(!empty($value)){
+    if (!empty($value)) {
         if ($value == "all") {
             // 価格に関する制限なし
             $sql = "SELECT * FROM products ORDER BY created_at DESC";
@@ -73,11 +75,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // 価格が1,500円未満
             $sql = "SELECT * FROM products WHERE value < 1500 ORDER BY created_at DESC";
         }
-        
+
         $stmt = $pdo->prepare($sql);
         $status = $stmt->execute();
     }
-    
+
     if ($status == false) { // 登録処理にエラーがあれば
         sql_error($stmt);
     }
@@ -123,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
 
             <div class="header-userinfo">
-                <p>大貫翔さん<br>アカウントリスト</p>
+                <p><?= $sname; ?>さん<br><a href="logout.php">ログアウト</a></p>
             </div>
             <div class="header-cart">
                 <img src="" alt="カート画像">
@@ -145,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="products-container">
             <div class="products">
-            <div class="search2">
+                <div class="search2">
                     <form action="search.php" method="post">
                         <p class="search-title">カスタマーレビュー</p>
                         <div>

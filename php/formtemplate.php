@@ -12,7 +12,7 @@ if ($title == 'ログイン画面') {
             <input id="password" type="password" name="password" placeholder="パスワードを入力" required><br>
             <div id="passwordError" class="error"></div>
         </div>';
-} else if ($title == '商品登録画面') {
+} else if ($title == '商品登録画面' || '商品編集画面') {
     $formContent = '
         <div class="form-input">
             <label for="name">商品名</label><br>
@@ -51,7 +51,8 @@ if ($title == 'ログイン画面') {
             <label for="image_path">商品画像</label><br>
             <input id="image_path" type="file" name="image" required><br>
             <div id="passwordConfirmError" class="error"></div>
-        </div>';
+        </div>
+        ';
 } else {
     // 登録画面の場合
     $formContent = '

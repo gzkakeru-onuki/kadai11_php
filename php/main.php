@@ -5,6 +5,7 @@ ini_set("display_errors", 1);
 
 include("../functions/funcs.php");
 $pdo = db_conn();
+$name=$_SESSION["name"];
 
 
 //３．データ登録SQL作成
@@ -58,7 +59,7 @@ $values =  $stmt->fetchAll(PDO::FETCH_ASSOC); //PDO::FETCH_ASSOC[カラム名の
             </div>
 
             <div class="header-userinfo">
-                <p>大貫翔さん<br>アカウントリスト</p>
+                <p><?=$name;?>さん<br><a href="logout.php">ログアウト</a></p>
             </div>
             <div class="header-cart">
                 <img src="" alt="カート画像">
@@ -132,6 +133,14 @@ $values =  $stmt->fetchAll(PDO::FETCH_ASSOC); //PDO::FETCH_ASSOC[カラム名の
                             <img class="productsimg" src="<?= $value["image_path"]; ?>" alt="適当な">
                             <p class="productsname"><?= $value["name"]; ?></p>
                             <p class="productsvalue"><?= $value["value"]; ?></p>
+                            <?php if ($_SESSION["role"] == 0) { ?>
+                                <form action="./edit.php" method="post">
+                                    <div class="edit">
+                                        <input type="hidden" name="productid" value="<?= $value["id"]; ?>">
+                                        <button class="editBtn" type="submit">編集</button>
+                                    </div>
+                                </form>
+                            <?php } ?>
                         </div>
                     <?php } ?>
                 </div>
