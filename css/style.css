@@ -1,0 +1,74 @@
+body {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    font-family: "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.link {
+    color: #21c2c2;;
+}
+
+.container {
+    text-align: center;
+}
+
+.head {
+    margin-top: 10px;
+}
+
+span {
+    color: rgb(243 185 10);
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    border: 1px solid slategray;
+    width: 480px;
+    padding: 90px;
+    margin: 10px auto;
+    height: 700px;
+    border-radius: 8px;
+}
+
+.form-input {
+    margin-bottom: 30px; /* 各フォーム要素の間隔 */
+}
+
+form input {
+    width: 100%;
+}
+
+form select{
+    width: 100%;
+    height: 30px;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: -15px;
+    margin-top: 10px;
+}
+
+.submitBtn {
+    width: 100%; /* 入力欄を全幅に設定 */
+    max-width: 300px; /* 入力欄の最大幅を指定 */
+    padding: 8px; /* 入力欄の内側余白 */
+    font-size: 13px; /* 入力欄のフォントサイズ */
+    border: 1px solid #ccc; /* 入力欄のボーダー */
+    border-radius: 4px; /* 角丸 */
+    background-color: rgb(243 185 10);
+}
+
+.submitBtn:hover{
+    background-color: rgb(224 169 5);
+}
+
+.signin {
+    margin-top:50px;
+}

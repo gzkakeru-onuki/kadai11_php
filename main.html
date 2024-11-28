@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <a href="#">N<span>uki</span>zon.co.jp<br>
+                    <div class="under"><span>U</span></div>
+                </a>
+            </div>
+
+            <div class="header-search">
+                <form action="search" method="post">
+                    <!-- ここはカテゴリとワードで絞り込み検索をする。　ワードは曖昧検索で -->
+                    <select name="category" id="category">
+                        <option value="食べ物">食べ物</option>
+                        <option value="お酒">お酒</option>
+                        <option value="飲み物">飲み物</option>
+                        <option value="ガジェット">ガジェット</option>
+                        <option value="PC">PC</option>
+                    </select>
+                    <input class="search-input" type="text" name="word" placeholder="Nukizon.co.jpを検索"><button
+                        class="searchBtn">検索</button>
+                </form>
+            </div>
+
+            <div class="header-userinfo">
+                <p>大貫翔さん<br>アカウントリスト</p>
+            </div>
+            <div class="header-cart">
+                <img src="" alt="カート画像">
+            </div>
+        </div>
+
+        <div class="headerUnder">
+            <!-- ここにselect * from products where category = categoryみたいな感じで、カテゴリで絞り込み -->
+            <ul class="under-list">
+                <li class="category-list"><a href="">すべて</a></li>
+                <li class="category-list"><a href="">ブラックフライデーセール</a></li>
+                <li class="category-list"><a href="">食べ物</a></li>
+                <li class="category-list"><a href="">お酒</a></li>
+                <li class="category-list"><a href="">飲み物</a></li>
+                <li class="category-list"><a href="">ガジェット</a></li>
+                <li class="category-list"><a href="">PC</a></li>
+            </ul>
+        </div>
+
+        <div class="products-container">
+            <div class="products">
+                <div class="search2">
+                    <p class="search-title">カスタマーレビュー</p>
+                    <div>
+                        <label for="rankFive">
+                            <input type="radio" id="rankFive" name="rank" value="5">全て
+                        </label>
+                    </div>
+                    <div>
+                        <label for="rankFour">
+                            <input type="radio" id="rankFour" name="rank" value="4">★★★★☆以上
+                        </label>
+                    </div>
+                    <div>
+                        <label for="rankThree">
+                            <input type="radio" id="rankThree" name="rank" value="3">★★★☆☆以上
+                        </label>
+                    </div>
+                    <div>
+                        <label for="rankTwo">
+                            <input type="radio" id="rankTwo" name="rank" value="2">★★☆☆☆以上
+                        </label>
+                    </div>
+                    <div>
+                        <label for="rankOne">
+                            <input type="radio" id="rankOne" name="rank" value="1">★☆☆☆☆以上
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <p class="search-title">価格</p>
+                    <div>
+                        <label for="ValueSix">
+                            <input type="radio" id="ValueSix" name="value" value="all">全て
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ValueFive">
+                            <input type="radio" id="ValueFive" name="value" value="30000">￥30,000以上
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ValueFour">
+                            <input type="radio" id="ValueFour" name="value" value="29999">￥30,000未満
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ValueThree">
+                            <input type="radio" id="ValueThree" name="value" value="9999">￥10,000未満
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ValueTwo">
+                            <input type="radio" id="ValueTwo" name="value" value="4999">￥5,000未満
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ValueOne">
+                            <input type="radio" id="ValueOne" name="value" value="1499">￥1,500未満
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="products-list">
+                    <!-- ここはForEachで商品情報を全て取って表示 -->
+                    <div class="productsitem">
+                        <img class="productsimg" src="./images/macbook_pro_14_inch__flj6su6ybjqu_large.jpg" alt="適当な">
+                        <p class="productsname">AppleWatch SE2</p>
+                        <p class="productsvalue">価格¥1,330円</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top"><a href="main.html">トップへ戻る</a></div>
+
+            <div class="footer">
+                <div class="footer-logo">
+                    <a href="#">N<span>uki</span>zon</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

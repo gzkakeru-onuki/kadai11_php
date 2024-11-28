@@ -1,0 +1,155 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+#category {
+    margin-right: -28px;
+    height: 28px;
+    border-radius: 6px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 15px;
+    background-color: #dfdfdf;
+    border-right: 1px solid #ffffff;
+}
+
+span {
+    color: rgb(243 185 10);
+}
+
+.search-input {
+    width: 485px;
+    margin-left: 20px;
+    border-radius: 6px;
+    font-weight: normal;
+    background-color: #ffffff;
+}
+
+.searchBtn {
+    background-color: rgb(243 185 10);
+    height: 32px;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.search-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.header {
+    background-color: #131921;
+    color: #ffffff;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    height: 100px;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.header-logo {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.under {
+    margin-left: 123px;
+    margin-top: -12px;
+    transform: scale(5, 1);
+    font-size: 14px;
+}
+
+.headerUnder {
+    background-color: #232f3e;
+    color: #ffffff;
+    font-size: 15px;
+    height: 25px;
+    margin-top: -15px;
+}
+
+.under-list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+.under-list a {}
+
+.category-list {
+    width: fit-content;
+    text-align: center;
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+.category-list:hover {
+    border: 1px solid #ffffff;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 250px 80%;
+}
+
+.search2 {
+    height: 400px;
+    background-color: aliceblue;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.products-list {
+    height: auto;
+    background-color: aquamarine;
+    margin: 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.productsitem {
+    height: 300px;
+    background-color: lightblue;
+}
+
+.footer {
+    background-color: #131921;
+    color: #ffffff;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    height: 100px;
+    padding: 30px;
+}
+
+.footer-logo {
+    margin: 0 auto;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.top {
+    cursor: pointer;
+    background-color: #232f3e;
+    color: #ffffff;   
+    text-align: center;
+}
+
+.productsimg {
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.productsname,.productsvalue {
+    text-align: center;
+    padding: 10px;
+}
+
