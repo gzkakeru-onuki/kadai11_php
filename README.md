@@ -6,7 +6,7 @@ amazonのような機能をある程度使いこなしてECサイトっぽく作
 ボリューム感けっこうあったので色々実装間に合ってないのでアップデート予定
 
 ## ③アプリのデプロイURL
-
+https://pioneer-mind.sakura.ne.jp/Nukizon/php
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 アカウント作成はご自由にどうぞ
